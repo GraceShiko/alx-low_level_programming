@@ -1,25 +1,34 @@
 #include "main.h"
 /**
- * _puts_recursion - is a function that prints a string.
+ * _strlen_rec - returns the length of string s by calculating it
+ * recursively
+ * @s: the string whose length is to be calculated
  *
- * @s: is a pointer to a char array
- *
- * Return: Return the transformed poin
- **/
-void _print_rev_recursion(char *s)
+ * Return: @n the length of the string
+ */
+int strlen_rec(char *s)
 {
-if (*s == 0)
+if (s[0] != 0)
 {
-return;
+return (1 + strlen_rec(&s[1]));
 }
-s++;
-_print_rev_recursion(s);
+return (0);
+}
 /**
  * _print_rev_recursion - prints a string followed by a new line
  * @s: the string to be printed
  *
  * Return: void
  */
-s--;
-_putchar(*s);
+void _print_rev_recursion(char *s)
+{
+if (s[])
+int n = strlen_rec(s) - 1;
+if (s[n] == 0)
+{
+_putchar(s[0]);
+return;
+}
+_putchar((char) (s[n]));
+_print_rev_recursion(&(s[n] - 1)- 1);
 }
