@@ -14,6 +14,12 @@ return;
 }
 s++;
 _print_rev_recursion(s);
+/**
+ * _print_rev_recursion - prints a string followed by a new line
+ * @s: the string to be printed
+ *
+ * Return: void
+ */
 s--;
 _putchar(*s);
 }
