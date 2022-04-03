@@ -1,22 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - multiply two numbers
- * @argc: argument count
- * @argv: array of pointers to argument strings
- * Return: result of multiplication or 1
- **/
+ * main - prints product of two numbers
+ * @argc: number of args
+ * @argv: array of args
+ * Return: 0 if okay, 1 if error input
+ */
 int main(int argc, char *argv[])
 {
-int a, b, result;
-if (argc <= 2)
+if (argc != 3)
 {
 printf("Error\n");
 return (1);
 }
-a = atoi(argv[1]);
-b = atoi(argv[2]);
-result = a * b;
-printf("%d\n", result);
+else
+{
+printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 return (0);
+}
 }
