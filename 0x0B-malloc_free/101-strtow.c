@@ -3,28 +3,34 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * strtow - concatenates arguments.
- * @str: String to be splitted.
+ * print_tab - Prints an array of string
+ * @tab: The array to print
  *
- * Return: a pointer to array of String.
+ * Return: nothing
  */
-char **strtow(char *str)
+void print_tab(char **tab)
 {
-char *array = NULL;
-unsigned int i = 0, j = 0, k;
-if (strncmp(str, "", 1) || str == NULL)
-return (NULL);
-array = malloc((i + j + 1) * sizeof(char));
-if (array == NULL)
-return (NULL);
-for (k = 0; k < i; k++)
-array[k] = str[k];
-i = k;
-for (k = 0; k < j; k++)
+int i;
+for (i = 0; tab[i] != NULL; ++i)
 {
-array[i] = str[k];
-i++;
+printf("%s\n", tab[i]);
 }
-array[i] = '\0';
-return (NULL);
+}
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: 1 if an error occurred, 0 otherwise
+ */
+int main(void)
+{
+char **tab;
+tab = strtow("Holberton School #cisfun ");
+if (tab == NULL)
+{
+printf("Failed\n");
+return (1);
+}
+print_tab(tab);
+return (0);
 }
